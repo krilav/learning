@@ -1,0 +1,33 @@
+git help - команды GIT
+git status - текущий статус
+git add . - отправляем в GIT
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/krilav/Price3M.git
+git push -u origin master
+
+heroku logs - логи
+heroku login - вход в хероки
+heroku create - создание приложения
+heroku push heroku master - отправляем файлы на хероку
+heroku ps:scale worker=1 - запуск программы на хосте
+heroku buildpacks:clear - 
+heroku git:clone -a 'имя приложения на хероки' - клонирует с Хероки на PC
+heroku git:remote -a 'имя приложения на хероки' - добавляет GIT в приложение
+
+pip freeze - версии методов (например использовать для хостинга)
+
+pip install pyinstaller
+pip install colorama
+pip install DateTime
+pip install pyTelegramBotAPI
+pip install PySocks
+pip install gunicorn
+
+
+
+
+
+
+
