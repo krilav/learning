@@ -1,7 +1,7 @@
 git help - команды GIT
 git status - текущий статус
 git add . - отправляем в GIT
-git init
+git init - инициация GIT в текущем каталоге
 git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/krilav/Price3M.git
