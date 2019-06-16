@@ -25,6 +25,8 @@ pip install pyTelegramBotAPI
 pip install PySocks
 pip install gunicorn
 
+print(telebot.TeleBot.send_message.__doc__)
+
 
 
 
