@@ -6,21 +6,22 @@ from colorama import Fore, Back, Style
 
 init()
 
-print( Back.GREEN )
+print(Back.GREEN)
 
-what = input( 'Выбираем действие (+,-) :' )
+what = input('Выбираем действие (+,-) :')
 
-a = float( input( 'Введите первое число :' ) )
+a = float(input('Введите первое число :'))
 
-b = float( input( 'Введите второе число :' ) )
+b = float(input('Введите второе число :'))
 
-if what == '+' :
+if what == '+':
     c = a + b
-    print( 'Результат: ' + str( c ) )
-elif what == '-' :
+    print('Результат: ' + str(c))
+elif what == '-':
     c = a - b
-    print( 'Результат: ' + str( c ) )
+    c1 = math.cos(a*b)
+    print('Результат: ' + str(c))
 else:
-    print( 'Выбрана не верная операция' )
-    
+    print('Выбрана не верная операция')
+
 input()
