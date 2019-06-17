@@ -8,13 +8,12 @@ import time
 start = time.time()
 
 
-def three_five(n):
-    return sum([i for i in range(n) if i % 3 == 0 or i % 5 == 0])
+def three_five(n, index=1):
+    start_time = time.time()
+    s_35 = sum([i for i in range(n) if i % 3 == 0 or i % 5 == 0])
+    if index == 1:
+        print('сумма элементов ряда от 1 до ', n, 'делимых на цело на 3 и 5 =', s_35)
+        print('Время работы функции - ', time.time() - start_time)
 
 
-# x = int(input('введите целое число: '))
-
-x = 1000
-print('сумма ряда от 1 до ', x, 'с делением на цело на 3 и 5 =', three_five(x))
-
-print(time.time() - start)
+three_five(1000, 1)
