@@ -1,21 +1,22 @@
+
 import time
 
 start_time = time.time()
 
-def is_polindrom(num):
-    raw = str(num)
-    r_num = int(raw[::-1])
-    if num == r_num:
-        return True
-    else:
-        return False
+i = 2520  # Делимость на 20
+c = False
+r = (3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19)
+while c is False:
+    str(i)
+    for j in r:
+        if i % j == 0:
+            c = True
+            continue
+        else:
+            c = False
+            break
+    i += 10  # Только четные
 
+print(i - 10)
 
-pol = []
-
-for i in range(100,1000):
-    for j in range(100,1000):
-        if is_polindrom(i * j):
-            pol.append(i*j)
-print(max(pol))
 print('Время работы функции - ', time.time() - start_time)
