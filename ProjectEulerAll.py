@@ -106,14 +106,17 @@ def project_euler_5(n, index=1):
     """Проект Эйлера, Задача 5.
 
        2520 - самое маленькое число, которое делится без остатка на все числа от 1 до 10.
-       Какое самое маленькое число делится нацело на все числа от 1 до 20?"""
+       Какое самое маленькое число делится нацело на все числа от 1 до 20?
+
+       n - число, до которого формируем список делителей ( от 1 до n)
+       index - печатать время работы программы и результат или нет. Значение '1' печатать, остальные значения -
+       не печатать."""
 
     start_time = time.time()
-    all_mn = []
     new_all_mn = []
     new_all_mn2 = []
 
-    for i in range(n):
+    for i in range(n):  # Поиск сокращенного списка для перебора деления без остатка
         # all_mn = set.union(set(all_mn), set(project_euler_3(i + 1, 0)))  # все простые можители, без повторений
         all_mn = project_euler_3(n - i, 0)
 
@@ -124,15 +127,12 @@ def project_euler_5(n, index=1):
 
         new_all_mn2 += new_all_mn
 
-    new_all_mn2 = set(new_all_mn2)
+    new_all_mn2 = set(new_all_mn2)  # Список без повторений
     col_all_mn = len(new_all_mn2)
-    print(new_all_mn2)
-    print(col_all_mn)
-    print(max(new_all_mn2))
-    k = max(new_all_mn2)
+    k = max(new_all_mn2)  # Определение шага итерации
     j = 0
 
-    while j != col_all_mn:
+    while j != col_all_mn:  # Поиск меньшего числа, делимого без остатка на заданный список чисел
 
         j = 0
 
@@ -147,16 +147,52 @@ def project_euler_5(n, index=1):
 
     if index == 1:
         print('Время работы функции - ', time.time() - start_time)
-        print(all_mn)
-        print(new_all_mn)
-        print(k)
+        print('Максимальное число, которое делится без остатка на числа из ряда от 1 до', n, '=', k)
 
     return new_all_mn2
+
+
+def project_euler_6(n, index=1):
+    """Проект Эйлера, Задача 6.
+
+       Сумма квадратов первых десяти натуральных чисел равна
+       1^2 + 2^2 + ... + 10^2 = 385
+       Квадрат суммы первых десяти натуральных чисел равен
+       (1 + 2 + ... + 10)^2 = 552 = 3025
+       Следовательно, разность между суммой квадратов и квадратом суммы первых десяти натуральных чисел
+       составляет 3025 − 385 = 2640.
+       Найдите разность между суммой квадратов и квадратом суммы первых ста натуральных чисел."""
+
+    start_time = time.time()
+
+    # a = [i + 1 for i in range(n)]
+    # b = [sum(a[n:i:-1]) for i in range(n - 1)]
+    # a.pop()
+    # raz_mez_kvd = 0
+
+    # for k in range(n-1):
+    #    raz_mez_kvd += 2 * a[k] * b[k]
+
+    a = 0
+    b = 0
+
+    for i in range(n + 1):
+        a += i * i
+        b += i
+
+    raz_mez_kvd = b ** 2 - a
+
+    if index == 1:
+        print('Время работы функции - ', time.time() - start_time)
+        print(raz_mez_kvd)
+
+    return raz_mez_kvd
 
 
 # project_euler_1(1000, 0)
 # project_euler_2(4000000, 0)
 # print(project_euler_3(600851475143, 0))
 # project_euler_4(3, 1)
-project_euler_5(20, 1)
+# project_euler_5(20, 1)
+project_euler_6(100, 1)
 # print(project_euler_2.__doc__)

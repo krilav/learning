@@ -2,21 +2,14 @@
 import time
 
 start_time = time.time()
+n = 100000
+a = 0
+b = 0
 
-i = 2520  # Делимость на 20
-c = False
-r = (3, 4, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19)
-while c is False:
-    str(i)
-    for j in r:
-        if i % j == 0:
-            c = True
-            continue
-        else:
-            c = False
-            break
-    i += 10  # Только четные
+for i in range(n + 1):
+    a += i * i
+    b += i
 
-print(i - 10)
+print(b**2 - a)
 
 print('Время работы функции - ', time.time() - start_time)
