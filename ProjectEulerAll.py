@@ -121,7 +121,6 @@ def project_euler_5(n, index=1):
         all_mn = project_euler_3(n - i, 0)
 
         for z in all_mn:
-
             pvt_all_mn = all_mn.count(z)
             new_all_mn.append(z ** pvt_all_mn)
 
@@ -189,10 +188,46 @@ def project_euler_6(n, index=1):
     return raz_mez_kvd
 
 
+def project_euler_7(n, index=1):
+    """Проект Эйлера, Задача 7.
+
+    Выписав первые шесть простых чисел, получим 2, 3, 5, 7, 11 и 13. Очевидно, что 6-ое простое число - 13.
+
+    Какое число является 10001-ым простым числом?
+    """
+
+    start_time = time.time()
+    i = 0
+    j = 3
+
+    all_simple = [2]
+    while i != n - 1:
+
+        h = 0
+
+        for k in all_simple:
+            if j % k == 0:
+                pass
+            else:
+                h += 1
+
+        if h == len(all_simple):
+            all_simple.append(j)
+            i += 1
+
+        j += 2
+
+    if index == 1:
+        print('Время работы функции - ', time.time() - start_time)
+        print(all_simple[n - 1])
+
+    return all_simple
+
+
 # project_euler_1(1000, 0)
 # project_euler_2(4000000, 0)
 # print(project_euler_3(600851475143, 0))
 # project_euler_4(3, 1)
 # project_euler_5(20, 1)
-project_euler_6(100, 1)
+project_euler_7(10001, 1)
 # print(project_euler_2.__doc__)
