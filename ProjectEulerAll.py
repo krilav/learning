@@ -1,5 +1,5 @@
 import time
-
+import math
 
 def project_euler_1(n, index=1):
     """Проект Эйлера, Задача 1.
@@ -272,5 +272,37 @@ def project_euler_8(n, index=1):
     return max(lst_of_prov)
 
 
-project_euler_8(13, 1)
+def project_euler_9(n, index=1):
+    """Проект Эйлера, Задача 8.
+        Тройка Пифагора - три натуральных числа a < b < c, для которых выполняется равенство
+
+        a2 + b2 = c2
+        Например, 32 + 42 = 9 + 16 = 25 = 52.
+
+        Существует только одна тройка Пифагора, для которой a + b + c = 1000.
+        Найдите произведение abc
+    """
+
+    start_time = time.time()
+    count_pif = []
+    for a in range(int(round(n / 2))):
+
+        for b in range(int(round(n / 2))):
+
+            if a + b + math.sqrt(a ** 2 + b ** 2) == n and (n - a - b) ** 2 == (a ** 2 + b ** 2):
+
+                count_pif = [a, b, n - a - b]
+        if len(count_pif) > 1:
+            pass
+    if len(count_pif) > 1:
+        pass
+
+    if index == 1:
+        print('Время работы функции - ', time.time() - start_time)
+        print(count_pif, count_pif[0] * count_pif[1] * count_pif[2])
+
+    return count_pif[0] * count_pif[1] * count_pif[2]
+
+
+project_euler_9(1000, 1)
 # print(project_euler_8.__doc__)
