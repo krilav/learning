@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fedff407-8527-4ba4-8264-31b801f4e8a7" name="Default Changelist" comment="first commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectEulerAll.py" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectEulerAll.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ProjectEulerAll.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="233" lean-forward="true" selection-start-line="233" selection-end-line="233" />
+            <state relative-caret-position="1019">
+              <caret line="275" column="2" selection-start-line="275" selection-start-column="2" selection-end-line="275" selection-end-column="2" />
               <folding>
                 <element signature="e#51#558#0" />
                 <element signature="e#598#1318#0" />
@@ -242,7 +241,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -349,8 +349,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ProjectEulerAll.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="233" lean-forward="true" selection-start-line="233" selection-end-line="233" />
+        <state relative-caret-position="1019">
+          <caret line="275" column="2" selection-start-line="275" selection-start-column="2" selection-end-line="275" selection-end-column="2" />
           <folding>
             <element signature="e#51#558#0" />
             <element signature="e#598#1318#0" />
