@@ -1,6 +1,28 @@
 import time
 import math
 
+
+def all_simple_find(n):
+    """Постоение массива из простых чисел меньших n.
+
+    """
+
+    p = 2
+    all_simple = []
+    find_simple = [True for k in range(n)]
+
+    while p * p < n:
+        for i in range(p * p, n, p):
+            find_simple[i] = False
+        p += 1
+
+    for p in range(2, n):
+        if find_simple[p]:
+            all_simple.append(p)
+
+    return all_simple
+
+
 def project_euler_1(n, index=1):
     """Проект Эйлера, Задача 1.
 
@@ -192,30 +214,11 @@ def project_euler_7(n, index=1):
     """Проект Эйлера, Задача 7.
 
     Выписав первые шесть простых чисел, получим 2, 3, 5, 7, 11 и 13. Очевидно, что 6-ое простое число - 13.
-
     Какое число является 10001-ым простым числом?
     """
 
     start_time = time.time()
-    i = 0
-    j = 3
-
-    all_simple = [2]
-    while i != n - 1:
-
-        h = 0
-
-        for k in all_simple:
-            if j % k == 0:
-                pass
-            else:
-                h += 1
-
-        if h == len(all_simple):
-            all_simple.append(j)
-            i += 1
-
-        j += 2
+    all_simple = all_simple_find(n)
 
     if index == 1:
         print('Время работы функции - ', time.time() - start_time)
@@ -273,11 +276,11 @@ def project_euler_8(n, index=1):
 
 
 def project_euler_9(n, index=1):
-    """Проект Эйлера, Задача 8.
-        Тройка Пифагора - три натуральных числа a < b < c, для которых выполняется равенство
+    """Проект Эйлера, Задача 9.
 
-        a2 + b2 = c2
-        Например, 32 + 42 = 9 + 16 = 25 = 52.
+        Тройка Пифагора - три натуральных числа a < b < c, для которых выполняется равенство
+        a^2 + b^2 = c^2
+        Например, 3^2 + 4^2 = 9 + 16 = 25 = 5^2.
 
         Существует только одна тройка Пифагора, для которой a + b + c = 1000.
         Найдите произведение abc
@@ -290,7 +293,6 @@ def project_euler_9(n, index=1):
         for b in range(int(round(n / 2))):
 
             if a + b + math.sqrt(a ** 2 + b ** 2) == n and (n - a - b) ** 2 == (a ** 2 + b ** 2):
-
                 count_pif = [a, b, n - a - b]
         if len(count_pif) > 1:
             pass
@@ -304,5 +306,22 @@ def project_euler_9(n, index=1):
     return count_pif[0] * count_pif[1] * count_pif[2]
 
 
-project_euler_9(1000, 1)
+def project_euler_10(n, index=1):
+    """Проект Эйлера, Задача 10.
+
+    Сумма простых чисел меньше 10 равна 2 + 3 + 5 + 7 = 17.
+    Найдите сумму всех простых чисел меньше двух миллионов.
+    """
+
+    start_time = time.time()
+    all_simple = all_simple_find(n)
+
+    if index == 1:
+        print('Время работы функции - ', time.time() - start_time)
+        print(all_simple)
+
+    return all_simple
+
+
+project_euler_10(20, 1)
 # print(project_euler_8.__doc__)

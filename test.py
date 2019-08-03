@@ -1,15 +1,8 @@
+import math
 
-import time
-
-start_time = time.time()
-n = 100000
-a = 0
-b = 0
-
-for i in range(n + 1):
-    a += i * i
-    b += i
-
-print(b**2 - a)
-
-print('Время работы функции - ', time.time() - start_time)
+a = [1, 2, 3]
+b = range(2, 5)
+b = list(b)
+print(b)
+a[1] = 5
+print(a)
