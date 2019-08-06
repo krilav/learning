@@ -1,8 +1,9 @@
-import math
 
-a = [1, 2, 3]
-b = range(2, 5)
-b = list(b)
-print(b)
-a[1] = 5
+
+a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+print(a)
+
+del a[-1][-2]
+
 print(a)
